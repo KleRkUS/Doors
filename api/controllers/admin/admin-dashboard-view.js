@@ -48,6 +48,7 @@ module.exports = {
 
 			return {
 				type: types[Number(type)],
+				typeNum: type,
 				renderOnlyLinks: false,
 				catalog: catalog
 			};
