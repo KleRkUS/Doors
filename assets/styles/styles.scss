@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+	font-size: 20px;
+	background: $backgColor;
+}
+
+h1, h2, a, span {
+	font-family: "Roboto";
+	text-decoration: none;
+}
+
+h3, h4, h5, p {
+	font-family: "Open Sans";
+}
+
+a {
+	color: $backgColor;
+	&:hover {
+		@include onMouseLink();
+	}
+}
+
+.el-transition {
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+	    -ms-transition: all .2s ease-in-out;
+	     -o-transition: all .2s ease-in-out;
+	        transition: all .2s ease-in-out;
+}
+
+header {
+	background: $colorLight;
+	width: 100%;
+	position: relative;
+	color: $backgColor;
+	@include defaultShadow();
+	z-index: 100;
+	.webs>li>a {
+		color: $backgColor;
+	}
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 2em 0 2em 0;
+	h1, h4 {
+		margin: 0;
+		font-family: "Montserrat Alternates";
+	}
+}
+
+menu {
+	margin-bottom: 0;
+	li {
+		list-style-type: none;
+		text-align: center;
+		padding-bottom: 1em;
+	}
+}
+
+ul.webs > li {
+	display: inline-block;
+	margin-left: .2em;
+	list-style-type: none;
+}
+
+.header-inner {
+	display: flex;
+	-webkit-align-content: center;
+	        align-content: center;
+}
+
+.header-contacts, .header-burger {
+	text-align: right;
+	-webkit-align-items: center;
+	        align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.webs img {
+	width: 1.5em;
+}
+
+.header-burger {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.header-contacts {
+		display: none;
+	}
+	header {
+		position: fixed;
+		top: 0;
+		background-color: transparent;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.header-inner {
+		background: $colorLight;
+		@include defaultShadow();
+	}
+	header menu {
+		@include defaultShadow();
+		float: right;
+		width: 20%;
+		margin-top: 0;
+		background: $backgColor;
+		display: none;	
+		height: 0;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		li {
+			display: inline-block;
+			width: auto;
+			margin-bottom: 0;
+			padding: 1em 0;
+			font-size: 1.2em;
+			border-bottom: 1px solid $colorDark;
+		}
+		a {
+			color: $colorDark;
+			&:hover {
+				color: $colorLight;
+			}
+		}
+	}
+	.header-burger {
+		display: flex;
+		i {
+			font-size: 3em;
+		}
+		button {
+			background: transparent;
+			border: none;
+		}
+	}
+	.header-menu-open {
+		display: flex;
+		height: auto;
+	}
+	.first-page {
+		margin-top: 6em;
+	}
+}
+
+@import 'site/main.scss';

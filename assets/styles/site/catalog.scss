@@ -1,0 +1,80 @@
+
+.catalog-header {
+	font-size: 1.2em;
+}
+
+.catalog-container {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.catalog-row {
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.catalog-row [class*="col-"] {
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin-bottom: 2em;
+}
+
+.catalog-block {
+	height: 100%;
+	padding: 1em 2em;
+	color: $backgColor;
+	background: $colorLight;
+	@include defaultShadow();
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.catalog-img {
+	width: 100%;
+	margin-top: auto;
+}
+
+.catalog-price {
+	-webkit-align-self: flex-start;
+	        align-self: flex-start;
+	display: inline-block;	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.catalog-description {
+	font-size: .7em;
+}
+
+.black {
+	color: #000;
+}
+
+.catalog-add-new {
+	-webkit-justify-content: center;
+	        justify-content: center;
+	    -webkit-align-content: center;
+	            align-content: center;
+	a {
+		display: inline-block;
+		text-align: center;
+		font-size: 4em;
+		border: 2px solid $backgColor;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.catalog-container {
+		margin-top: 13em;
+	}
+}

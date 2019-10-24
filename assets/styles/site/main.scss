@@ -1,0 +1,253 @@
+.first-page {
+	background: url(../images/paris-890385-min.jpg);
+	width: 100%;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	color: $backgColor;
+	-webkit-border-bottom-left-radius: 15em;
+	        border-bottom-left-radius: 15em;
+	-webkit-border-bottom-right-radius: 15em;
+	        border-bottom-right-radius: 15em;
+	h1 {
+		font-weight: 700;
+		font-size: 2.3em;
+	}
+	h3 {
+		font-weight: 300;
+		font-size: 1.3em;
+	}
+	h1, h3 {
+		background: rgba(0, 142, 171, .72);
+		display: inline-block;
+		padding: .3em .5em;
+	}
+}
+
+.button {
+	color: $backgColor;
+	display: inline-block;
+	background: $colorButton;
+	padding: .3em .5em;
+	border: none;
+	font-size: 1.4em;
+	font-family: "Roboto";
+	font-weight: 300;
+	@include buttonShadow();
+	&:hover {
+		text-decoration: none;
+		color: $backgColor;
+		@include onMouseShadow();
+	}
+}
+
+.first-page-text {
+	margin: 6em 0;
+}
+
+article {
+	margin: 3.25em 0;
+}
+
+.article-page {
+	padding: 1.4em 0 1.4em 0;
+}
+
+.first-page-button {
+	margin-bottom: 4.5em;
+	text-align: center;
+}
+
+.page-light-text {
+	color: $backgColor;
+	background: $colorDark;
+}
+
+.third-page {
+	h2, a {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.article-block-header {
+	h2 {
+		display: inline-block;
+		margin-top: 0;
+	}
+	h2, img, a {
+		vertical-align: middle;
+		margin-left: .4em;
+	}
+}
+
+.third-page-catalog-rows {
+	margin-bottom: .4em;
+}
+
+.third-page-catalog-first-row {
+	text-align: left;
+	h2, a {
+		text-align: left;
+		vertical-align: middle;
+	}
+	img {
+		margin-left: 10%;
+		height: 2.4em;
+	}
+}
+
+.third-page-catalog-other-rows {
+	text-align: center;
+	margin-top: 1em;
+	img {
+		width: 80%;
+	}
+}
+
+.third-page .container .row:nth-child(2) {
+	margin-bottom: 1.5em;
+}
+
+.third-page-catalog-small {
+	margin-top: 1em;
+	h2, a {
+		width: auto;
+	}
+	h2, a {
+		margin: 0;
+	}
+	div>div {
+		vertical-align: middle;
+		display: inline-block;
+		width: auto;
+		margin-left: .4em
+	}
+}
+
+.color-text {
+	h2 {
+		color: $colorDark;
+	}
+}
+
+.fourth-page-profit-block {
+	margin-bottom: 1em;
+	h2 {
+		font-size: 1.3em;
+	}
+	p {
+		margin-top: .3em;
+		font-size: .9em;
+		overflow-wrap: break-word;
+	}
+}
+
+.sixth-page {
+	form, label, input {
+		text-align: left;
+		font-weight: 300!important;
+	}
+	label {
+		font-family: 'Roboto';
+		margin: .3em 0 0 0;
+	}
+	input {
+		border: none;
+		border-bottom: 1px solid #000;
+		&, &::placeholder {
+			font-weight: 300;
+			font-family: 'Open Sans';
+		}
+	}
+	input[type="submit"] {
+		margin-top: .4em;
+	}
+	h2 {
+		margin-top: 0;
+	}
+	.row {
+		display: flex;
+		align-items: center;
+		.col-md-4 {
+			-webkit-flex-direction: column;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+			.row {
+				display: inline-block;
+			    text-align: left;
+			}
+			p {
+				margin-bottom: 1em;
+				font-size: 1.1em;
+			}
+		}
+	}
+}
+
+.wrap-el {
+	white-space: pre-line;
+}
+
+footer {
+	padding-top: 3em;
+	background: $footerColor;
+	.col-md-6:nth-of-type(2) {
+		height: 100%;
+	}
+	.logo {
+		margin-top: 0;
+	}
+	ul {
+		float: right;
+	}
+	iframe {
+		width: 100%;
+		height: 10em;
+		border: none;
+	}
+	a {
+		color: blue;
+		text-decoration: underline;
+		float: right;
+		font-size: 1em;
+		&:hover {
+			color: blue;
+		}
+	}
+}
+
+.footer-webs-row {
+	margin-bottom: 1em;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+
+	.logo h4 {
+		font-size: 1em;
+	}
+
+	.header-time {
+		display: none;
+	}
+
+	.third-page {
+		h2 {
+			font-size: 1.6em;
+		}
+	}
+
+	.fourth-page {
+		.color-text {
+			padding-left: 1.3em!important;
+			padding-right: 1.3em!important;
+		}
+	}
+	footer {
+		padding-left: 1.3em!important;
+		padding-right: 1.3em!important;
+	}
+}

@@ -1,0 +1,36 @@
+.container-admin {
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	margin: 2em 0;
+}
+
+.admin-back {
+	color: #000;
+	font-size: 2em;
+}
+
+.admin-form {
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	text-align: left;
+	display: flex;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	input, textarea, option, select {
+		color: #000;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	input::placeholder, textarea::placeholder, select::placeholder {
+		color: #414141;
+	}
+	input[type="checkbox"] {
+		width: 10%;
+	}
+}
+
+.admin-button {
+	color: $backgColor!important;
+}

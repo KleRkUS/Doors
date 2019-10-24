@@ -1,0 +1,71 @@
+<div class="container catalog-container">
+	
+	<a href="/" class="admin-back">Вернуться</a>	
+
+		<% if (renderOnlyLinks == true) {%>
+			
+			<div class="row catalog-row">
+
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				<div class="catalog-block">
+					<a href="/admin/dashboard/0">Фурнитура</a>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				<div class="catalog-block">
+					<a href="/admin/dashboard/1">Входные двери</a>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-6">
+				<div class="catalog-block">
+					<a href="/admin/dashboard/2">Межкомнатные двери</a>
+				</div>
+			</div>
+	
+		<%} else if (catalog) {%>
+			
+			<a href="/admin/dashboard/all" class="admin-back">Вернуться</a>
+			<div class="row catalog-row">
+			
+			<% for (item of catalog) {%>
+		
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				<div class="catalog-block">
+					<h2 class="catalog-header"><%= item.name%></h2>
+					<img src="<%= item.link%>" alt="<%= item.name%>" class="catalog-img">
+					<p class="catalog-description"><%= item.description%></p>
+					<span class="catalog-price"><%= item.price%>&#8381;</span>
+					<a href="/admin/editform/<%= item.id%>">Редактировать</a>
+					<a href="/admin/delete/<%= item.id%>/<%= item.type%>">Удалить</a>
+
+					<% if (item.show){ %>
+						<p class="catalog-description" style="margin-top: 1em; color: green;">Показано</p>
+					<%} else {%>
+						<p class="catalog-description" style="margin-top: 1em; color: red;">Скрыто</p>
+					<%}%>
+				</div>
+			</div>
+
+			<%}%>
+
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				<div class="catalog-block catalog-add-new">
+					<a href="/admin/addform/<%= item.type%>">+</a>
+				</div>
+			</div>
+
+		<%} else {%>
+			<h2 class="black">Либо что-то не так, либо здесь пусто</h2>
+
+			<div class="row catalog-row">
+
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				<div class="catalog-block catalog-add-new">
+					<a href="/admin/addform">+</a>
+				</div>
+			</div>
+
+		<%}%>
+
+	</div>
+</div>

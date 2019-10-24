@@ -1,0 +1,42 @@
+<div class="container">
+	<h1>Добавить товар</h1>
+	<a href="/admin/dashboard/<%=type%>" class="admin-back">Вернуться</a>
+
+	<div class="row container-admin">
+	<div class="catalog-block">
+		
+		<form method="POST" action="/admin/add" class="admin-form">
+
+			<input type="hidden" name="_csrf" value="<%- _csrf%>"/>
+
+			<label for="name">Название:</label>
+			<input type="text" name="name" placeholder="Модель">
+
+			<label for="description">Описание:</label>
+			<textarea name="description" id="description" placeholder="Дверь металлическая"></textarea>
+
+			<label for="img">Ссылка на изображение:</label>
+			<input type="text" name="link" id="img" placeholder="https://placeholder.io">
+
+			<label for="price">Цена:</label>
+			<input type="number" name="price" id="price" placeholder="4000">
+
+			<label for="select">Тип:</label>
+			<select name="type" id="select">
+				<option value="0">Фурнитура</option>
+				<option value="1" selected="selected">Входные</option>
+				<option value="2">Межкомнатные</option>
+			</select>
+
+			<label for="show">Показать:</label>
+			<input type="checkbox" name="show" checked="true">
+
+			<input type="submit" name="submit" value="Сохранить" class="button admin-button">
+
+		</form>
+
+	</div>
+	</div>
+	
+
+</div>

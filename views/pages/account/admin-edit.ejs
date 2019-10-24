@@ -1,0 +1,61 @@
+<div class="container">
+	<h1>Добавить товар</h1>
+	<a href="/admin/dashboard/<%=thing.type%>" class="admin-back">Вернуться</a>
+
+	<div class="row container-admin">
+		<div class="catalog-block">
+		
+			<form method="POST" action="/admin/edit/<%= thing.id%>" class="admin-form">
+
+				<input type="hidden" name="_csrf" value="<%- _csrf%>"/>
+
+				<label for="name">Название:</label>
+				<input type="text" name="name" placeholder="Модель" value="<%= thing.name%>">
+
+				<label for="description">Описание:</label>
+				<textarea name="description" id="description" placeholder="Дверь металлическая">
+					<%= thing.description%>
+				</textarea>
+
+				<label for="img">Ссылка на изображение:</label>
+				<input type="text" name="link" id="img" placeholder="https://placeholder.io" value="<%= thing.link%>">
+
+				<label for="price">Цена:</label>
+				<input type="number" name="price" id="price" placeholder="4000" value="<%= thing.price%>">
+
+				<label for="select">Тип:</label>
+				<select name="type" id="select">
+
+					<% for (let i = 0; i < arr.length; i++) {%>
+
+						<% if (thing.type == i) {%>
+
+							<option value="<%= i%>" selected="selected"><%= arr[i]%></option>
+
+						<%} else {%>
+
+							<option value="<%= i%>"><%= arr[i]%></option>
+
+						<%}%>
+
+
+					<%}%>
+
+				</select>
+
+				<label for="show">Показать:</label>
+
+				<% if (thing.show == true) {%>
+					<input type="checkbox" name="show" checked="true">
+				<%} else if (thing.show == false) {%>
+					<input type="checkbox" name="show">
+				<%}%>
+
+				<input type="submit" name="submit" value="Сохранить" class="button admin-button">
+
+
+			</form>
+		
+		</div>
+	</div>
+</div>
