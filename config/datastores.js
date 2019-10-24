@@ -49,7 +49,8 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mysql',
-    url: 'mysql://root:rootpass@localhost:3306/doors',
+    url: 'mysql://mbkbjriyb754f9q5:tb3dg7l50jeots9n@xefi550t7t6tjn36.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/g7uvo3xem269u63d',
+    //url: 'mysql://root:rootpass@localhost:3306/doors',
 
   },
 
