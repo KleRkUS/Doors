@@ -4,7 +4,7 @@ body {
 	background: $backgColor;
 }
 
-h1, h2, a, span {
+h1, h2, a, span, .button-a {
 	font-family: "Roboto";
 	text-decoration: none;
 }
@@ -13,7 +13,7 @@ h3, h4, h5, p {
 	font-family: "Open Sans";
 }
 
-a {
+a, .button-a {
 	color: $backgColor;
 	&:hover {
 		@include onMouseLink();
