@@ -251,8 +251,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://protected-reef-32493.herokuapp.com',
-      'https://www.protected-reef-32493.herokuapp.com',
+      'https://villieyour.tech',
+      'https://www.villieyour.tech',
     ],
 
 
