@@ -17,11 +17,6 @@
 		font-weight: 300;
 		font-size: 1.3em;
 	}
-	h1, h3 {
-		background: rgba(0, 142, 171, .72);
-		display: inline-block;
-		padding: .3em .5em;
-	}
 }
 
 .button {
@@ -265,6 +260,23 @@ footer {
 	border: none;
 	&:hover {
 		text-decoration: underline;
+	}
+}
+
+
+
+.whats-hidden {
+	padding: 1em 1.5em;
+	background: #FFF;
+	border: 1px solid #414141;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: absolute;
+	display: none;
+	@include defaultShadow;
+	a {
+		float: none;
 	}
 }
 

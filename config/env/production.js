@@ -251,8 +251,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://villieyour.tech',
-      'https://www.villieyour.tech',
+      'https://dveri-del.ru',
+      'https://www.dveri-del.ru',
     ],
 
 

@@ -60,9 +60,11 @@ menu {
 }
 
 ul.webs > li {
+	vertical-align: middle;
 	display: inline-block;
 	margin-left: .2em;
 	list-style-type: none;
+	cursor: pointer;
 }
 
 .header-inner {
@@ -77,6 +79,15 @@ ul.webs > li {
 	        align-items: center;
 	display: flex;
 	justify-content: flex-end;
+}
+
+.header-contacts .whats-icon {
+	color: $backgColor;
+}
+
+.whats-hidden a {
+	color: #000;
+	text-decoration: underline;
 }
 
 .webs img {
